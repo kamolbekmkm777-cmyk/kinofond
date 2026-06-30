@@ -39,6 +39,20 @@
   .sectitle{font-size:clamp(26px,4.5vw,46px)}
   .lead{font-size:clamp(16px,2vw,20px);color:var(--ink-soft);max-width:860px}
 
+  .videowrap{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:28px}
+  @media(max-width:880px){.videowrap{grid-template-columns:1fr}}
+  .vidcard{background:var(--card);border-radius:20px;box-shadow:var(--shadow);padding:14px;text-align:left}
+  .vidcard h3{font-size:17px;margin:0 0 10px;display:flex;align-items:center;gap:9px;color:var(--ink);font-weight:800}
+  .vidcard h3 b{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none}
+  .ratio{position:relative;width:100%;aspect-ratio:16/9;border-radius:13px;overflow:hidden;background:#0b1220}
+  .ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .vid-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#9fb2cc;background:linear-gradient(135deg,#0e1f3c,#11294d);text-align:center;padding:20px}
+  .vid-ph svg{width:46px;height:46px;stroke:#5b8def;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .vid-ph span{font-size:13px;letter-spacing:.3px;line-height:1.5}
+  .vidsingle{max-width:940px;margin:28px auto 0}
+  .vidsingle .ratio{box-shadow:var(--shadow-l)}
+  .vidhint{font-size:13.5px;color:var(--ink-soft);margin-top:14px}
+
   .callout{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(120deg,#e9fbf6,#e2eefe);border:1.5px solid #bfe9df;border-radius:18px;padding:18px 20px;box-shadow:var(--shadow);max-width:900px;margin-top:18px}
   .callout .ic{font-size:26px;color:var(--teal);width:46px;height:46px;border-radius:13px;background:#fff;flex:none;box-shadow:var(--shadow)}
   .callout p{margin:0;font-size:15.5px;color:var(--ink)}
@@ -396,9 +410,17 @@
   </div>
 </section>
 
-<section class="slide" id="end" data-name="Rahmat">
+<section class="slide" id="video" data-name="Video">
   <div class="wrap" style="text-align:center">
-    <h2 class="reveal d2" style="font-size:clamp(36px,7vw,74px);background:linear-gradient(90deg,#0e1f3c,#1466e6 55%,#0bb39b);-webkit-background-clip:text;background-clip:text;color:transparent">E’tiboringiz uchun rahmat!</h2>
+    <span class="kicker reveal"><b style="background:#1466e6"></b> Video</span>
+    <h2 class="sectitle reveal d1">Tizim — video tushuntiruv</h2>
+    <p class="lead reveal d2" style="margin-left:auto;margin-right:auto">Tizim jarayonini qisqa animatsion videoda ko‘ring.</p>
+    <div class="vidsingle reveal d2">
+      <div class="ratio">
+        <iframe src="https://www.youtube.com/embed/WSnW-v-3Aqk?rel=0&amp;modestbranding=1" title="Tizim — video tushuntiruv" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="vidhint reveal d3">4K sifat uchun pleyerda ⚙️ → Quality → 2160p ni tanlang.</div>
+    </div>
   </div>
 </section>
 
@@ -430,6 +452,12 @@
   <div class="wrap" style="text-align:center">
     <img class="qrimg reveal d2" src="data:image/png;base64,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89nud8rKPvO77fge7XieV/Z5x99JX1YAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACDtMj3At11v9+kR/tjr+Zge4atWntHKXk2tezZTe7Xju79i6l042z6v8Hv1Pl9WAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAg7TI9APyn1/Px8bXX231k3RUrM69Yud+pZ7Rix+e74z6v2PF+p87V2X4nfVkBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIC0y/QAwIzr7f7xta/n4y9O8p11d7xffreVM3k2vqwAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAEDaz3EcIwtfb/ePr309H39xkt9tx33eceYp9up32/H5rszM+872/vqyAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaZfpAT5xvd2nR+AfrDyj1/PxFyd539S5WrnflWt3fI+mzsaOdjzPO848Zcff2BW+rAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAgTawAAGliBQBIEysAQNrPcRzTMwAA/Fe+rAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKT9H1ep311RIW5JAAAAAElFTkSuQmCC" alt="QR kod — taqdimot havolasi" width="640" height="640">
     <div class="qrlink reveal d2">kamolbekmkm777-cmyk.github.io/kinofond</div>
+  </div>
+</section>
+
+<section class="slide" id="end" data-name="Rahmat">
+  <div class="wrap" style="text-align:center">
+    <h2 class="reveal d2" style="font-size:clamp(36px,7vw,74px);background:linear-gradient(90deg,#0e1f3c,#1466e6 55%,#0bb39b);-webkit-background-clip:text;background-clip:text;color:transparent">E’tiboringiz uchun rahmat!</h2>
   </div>
 </section>
 
