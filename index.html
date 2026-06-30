@@ -64,6 +64,7 @@
   #ytfacade:hover .ytplay{transform:translate(-50%,-50%) scale(1.08)}
   .ytposter{background:linear-gradient(135deg,#0e1f3c,#11294d 55%,#0a8d7d)}
   .ytlabel{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:#cfe0f5;font-size:14px;font-weight:600;letter-spacing:.3px;pointer-events:none}
+  .ratio video.kfvideo{position:absolute;inset:0;width:100%;height:100%;background:#000;display:block}
 
   .callout{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(120deg,#e9fbf6,#e2eefe);border:1.5px solid #bfe9df;border-radius:18px;padding:18px 20px;box-shadow:var(--shadow);max-width:900px;margin-top:18px}
   .callout .ic{font-size:26px;color:var(--teal);width:46px;height:46px;border-radius:13px;background:#fff;flex:none;box-shadow:var(--shadow)}
@@ -428,11 +429,10 @@
     <h2 class="sectitle reveal d1">Tizim — video tushuntiruv</h2>
     <p class="lead reveal d2" style="margin-left:auto;margin-right:auto">Tizim jarayonini qisqa animatsion videoda ko‘ring.</p>
     <div class="vidsingle reveal d2">
-      <div class="ratio ytposter" id="ytfacade" data-id="--cX3RLQRdU" role="button" tabindex="0" aria-label="Videoni ijro etish">
-        <span class="ytplay" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.5 7.4a8.6 8.6 0 0 0-6-6C55.2 0 34 0 34 0S12.8 0 7.5 1.4a8.6 8.6 0 0 0-6 6A89 89 0 0 0 0 24a89 89 0 0 0 1.5 16.6 8.6 8.6 0 0 0 6 6C12.8 48 34 48 34 48s21.2 0 26.5-1.4a8.6 8.6 0 0 0 6-6A89 89 0 0 0 68 24a89 89 0 0 0-1.5-16.6z" fill="#f00"/><path d="M27.2 34.4 45.1 24 27.2 13.6z" fill="#fff"/></svg></span>
-        <span class="ytlabel">Tizim videosi — ko‘rish uchun bosing</span>
+      <div class="ratio">
+        <video class="kfvideo" controls preload="metadata" playsinline poster="https://ehacxsfgtgkuyffrsuzi.supabase.co/storage/v1/object/public/kinofond-media/poster.jpg" src="https://ehacxsfgtgkuyffrsuzi.supabase.co/storage/v1/object/public/kinofond-media/new-system.mp4"></video>
       </div>
-      <div class="vidhint reveal d3">Ijro etish uchun bosing. Agar ochilmasa — <a href="https://youtu.be/--cX3RLQRdU" target="_blank" rel="noopener">YouTube’da oching ↗</a>. Yuqori sifat uchun ⚙️ → 1080p.</div>
+      <div class="vidhint reveal d3">▶ tugmasini bosing. To‘liq ekran uchun ⛶ belgisini bosing.</div>
     </div>
   </div>
 </section>
