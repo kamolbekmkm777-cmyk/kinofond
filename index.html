@@ -231,9 +231,8 @@
   <div class="wrap">
     <span class="kicker reveal"><b style="background:var(--old)"></b> 01 — Bugungi kundagi tizim holati</span>
     <h2 class="sectitle reveal d1">Bugungi kundagi tizim holati</h2>
-    <p class="lead reveal d2">Mazkur tizimda barcha jarayonlar qog‘oz hujjatlar va qattiq disklar (hard) vositasida amalga oshirilgan. Filmlar xodimlar tomonidan yetkazilgan, viloyatlararo qatnov talab etilgan va har bir kinoteatrga alohida xodim orqali yetkazilgan. Natijada ayrim hollarda filmlar o‘z vaqtida yetkazilmagan, shartnomalar tuzilmagan, moliyaviy hisob-kitoblar to‘liq amalga oshirilmagan va kinoteatrlar bilan ishlar tizimli olib borilmagan.</p>
     <div class="flowbox" id="old-box">
-    <div class="flowcap old reveal d3" id="old-cap">Jarayonni boshlash uchun <span class="muted" style="margin-left:8px">“Keyingi qadam” tugmasini bosing</span></div>
+    <div class="flowcap old reveal d3" id="old-cap"></div>
     <div class="stage old reveal d3">
       <svg class="flow" id="svg-old" viewBox="0 0 1000 620" aria-label="Bugungi tizim sxemasi"></svg>
       <button class="fsbtn" data-box="old-box" title="To‘liq ekran"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button>
@@ -268,13 +267,12 @@
   <div class="wrap">
     <span class="kicker reveal"><b style="background:var(--new)"></b> 02 — Yangi tizim holati</span>
     <h2 class="sectitle reveal d1">Yangi tizim holati</h2>
-    <p class="lead reveal d2">Shartnomalar <b>KINEMATOGRAFIYA AGENTLIGI</b> bilan tuziladi, film <b>Kinofond orqali</b> DCP/MP4 formatda uzatiladi.</p>
     <div class="callout reveal d2">
       <span class="ic"><svg><use href="#ic-cal"/></svg></span>
       <p>Jahon film prokati sohasidagi xalqaro standartlar va ilg‘or tajribalarni o‘rganish asosida, kinoteatrlarning rejali faoliyatini ta’minlash maqsadida <b>har oyning boshida ularga kelgusi bir oylik repertuarni taqdim etishni taklif etamiz.</b></p>
     </div>
     <div class="flowbox" id="new-box">
-    <div class="flowcap new reveal d3" id="new-cap">Jarayonni boshlash uchun <span class="muted" style="margin-left:8px">“Keyingi qadam” tugmasini bosing</span></div>
+    <div class="flowcap new reveal d3" id="new-cap"></div>
     <div class="stage new reveal d3">
       <svg class="flow" id="svg-new" viewBox="0 0 1000 560" aria-label="Yangi tizim sxemasi"></svg>
       <button class="fsbtn" data-box="new-box" title="To‘liq ekran"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button>
@@ -295,9 +293,8 @@
   <div class="wrap">
     <span class="kicker reveal"><b style="background:#0b9d86"></b> 03 — Xavfsizlik va hisobot</span>
     <h2 class="sectitle reveal d1">Xavfsizlik va hisobot</h2>
-    <p class="lead reveal d2">Film <b>Kinofond</b> bilan <b>kinoteatrlar</b> o&#8216;rtasida <b>MP4</b> va <b>DCP</b> formatda, shifrlangan va himoyalangan holda uzatiladi; kinoteatrlar esa har bir seans bo&#8216;yicha hisobotni Kinofondga jo‘natadi.</p>
     <div class="flowbox" id="sec-box">
-    <div class="flowcap new reveal d3" id="sec-cap">Jarayonni boshlash uchun <span class="muted" style="margin-left:8px">&#8220;Keyingi qadam&#8221; tugmasini bosing</span></div>
+    <div class="flowcap new reveal d3" id="sec-cap"></div>
     <div class="stage new reveal d3">
       <svg class="flow" id="svg-sec" viewBox="0 0 1000 520" aria-label="Xavfsizlik va hisobot sxemasi"></svg>
       <button class="fsbtn" data-box="sec-box" title="To&#8216;liq ekran"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button>
@@ -619,7 +616,7 @@ class Flow{
   clear(){[...this.cL.children].forEach(c=>c.remove());[...this.tL.children].forEach(c=>c.remove());[...this.mL.children].forEach(c=>c.remove());this.conns={};for(const id in this.nodeEls){const e=this.nodeEls[id];e.classList.remove('active','accepted','rejected','kept');e.style.opacity='';e.style.transition='';}}
   rebuild(t){this.clear();for(let i=0;i<=t;i++)this.run(this.steps[i],false);this.meta();}
   reset(){this.stop();this.idx=-1;this.clear();
-    if(this.cap)this.cap.innerHTML='Jarayonni boshlash uchun <span class="muted" style="margin-left:8px">“Keyingi qadam” tugmasini bosing</span>';
+    if(this.cap)this.cap.innerHTML='';
     if(this.note&&!this.fixed)this.note.innerHTML=`<div class="ntitle"><span class="ic" style="color:${this.accent}"><svg><use href="#ic-play"/></svg></span> Bosqichni tanlang</div><div class="ndesc">Har bir bosqich ketma-ket tasvirlanadi. Tugmalar orqali jarayonni kuzating.</div>`;this.meta();}
   play(){this.stop();const gen=(this._gen=(this._gen||0)+1);if(this.idx>=this.steps.length-1)this.reset();const tick=()=>{if(gen!==this._gen)return;if(!this.next()){this.stop();return;}const d=(this.steps[this.idx]&&this.steps[this.idx].dur)||4400;this.timer=setTimeout(tick,d);};this.next();const d0=(this.steps[this.idx]&&this.steps[this.idx].dur)||4400;this.timer=setTimeout(tick,d0);}
   stop(){if(this.timer){clearTimeout(this.timer);this.timer=null;}this._gen=(this._gen||0)+1;}
