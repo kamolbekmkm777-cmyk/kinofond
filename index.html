@@ -429,10 +429,11 @@
     <h2 class="sectitle reveal d1">Tizim — video tushuntiruv</h2>
     <p class="lead reveal d2" style="margin-left:auto;margin-right:auto">Tizim jarayonini qisqa animatsion videoda ko‘ring.</p>
     <div class="vidsingle reveal d2">
-      <div class="ratio">
-        <video class="kfvideo" controls preload="metadata" playsinline poster="https://ehacxsfgtgkuyffrsuzi.supabase.co/storage/v1/object/public/kinofond-media/poster.jpg" src="https://ehacxsfgtgkuyffrsuzi.supabase.co/storage/v1/object/public/kinofond-media/new-system.mp4"></video>
+      <div class="ratio ytposter" id="kffacade" role="button" tabindex="0" aria-label="Videoni ijro etish">
+        <span class="ytplay" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.5 7.4a8.6 8.6 0 0 0-6-6C55.2 0 34 0 34 0S12.8 0 7.5 1.4a8.6 8.6 0 0 0-6 6A89 89 0 0 0 0 24a89 89 0 0 0 1.5 16.6 8.6 8.6 0 0 0 6 6C12.8 48 34 48 34 48s21.2 0 26.5-1.4a8.6 8.6 0 0 0 6-6A89 89 0 0 0 68 24a89 89 0 0 0-1.5-16.6z" fill="#f00"/><path d="M27.2 34.4 45.1 24 27.2 13.6z" fill="#fff"/></svg></span>
+        <span class="ytlabel">Tizim videosi — ko‘rish uchun bosing</span>
       </div>
-      <div class="vidhint reveal d3">▶ tugmasini bosing. To‘liq ekran uchun ⛶ belgisini bosing.</div>
+      <div class="vidhint reveal d3">Pleyer ochilmasa — <a href="https://ehacxsfgtgkuyffrsuzi.supabase.co/storage/v1/object/public/kinofond-media/new-system.mp4" target="_blank" rel="noopener">videoni yangi oynada oching ↗</a></div>
     </div>
   </div>
 </section>
@@ -480,6 +481,7 @@
 <script>
 const io=new IntersectionObserver((es,ob)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ob.unobserve(e.target);}}),{threshold:.16});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function(){var f=document.getElementById('kffacade');if(!f)return;function go(){var w=f.parentNode;f.outerHTML='<div class=\"ratio\"><video class=\"kfvideo\" controls autoplay playsinline src=\"https://ehacxsfgtgkuyffrsuzi.supabase.co/storage/v1/object/public/kinofond-media/new-system.mp4\"></video></div>';var nv=w.querySelector('video.kfvideo');if(nv){nv.play().catch(function(){});}}f.addEventListener('click',go);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});})();
 (function(){var f=document.getElementById('ytfacade');if(!f)return;function go(){f.innerHTML='<iframe src="https://www.youtube.com/embed/'+f.dataset.id+'?autoplay=1&rel=0&modestbranding=1" title="Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';}f.addEventListener('click',go);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});})();
 document.querySelectorAll('.pbtn,.fsbtn').forEach(b=>{if(b.title&&!b.getAttribute('aria-label'))b.setAttribute('aria-label',b.title);});
 document.querySelectorAll('.flowcap').forEach(c=>{c.setAttribute('aria-live','polite');c.setAttribute('role','status');});
