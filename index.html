@@ -52,6 +52,13 @@
   .vidsingle{max-width:940px;margin:28px auto 0}
   .vidsingle .ratio{box-shadow:var(--shadow-l)}
   .vidhint{font-size:13.5px;color:var(--ink-soft);margin-top:14px}
+  .vidhint a{color:var(--new);font-weight:700;text-decoration:none}
+  .vidhint a:hover{text-decoration:underline}
+  .ratio .ytthumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  #ytfacade{cursor:pointer}
+  .ytplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:88px;height:62px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.45));transition:transform .2s;pointer-events:none}
+  .ytplay svg{width:100%;height:100%;display:block}
+  #ytfacade:hover .ytplay{transform:translate(-50%,-50%) scale(1.08)}
 
   .callout{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(120deg,#e9fbf6,#e2eefe);border:1.5px solid #bfe9df;border-radius:18px;padding:18px 20px;box-shadow:var(--shadow);max-width:900px;margin-top:18px}
   .callout .ic{font-size:26px;color:var(--teal);width:46px;height:46px;border-radius:13px;background:#fff;flex:none;box-shadow:var(--shadow)}
@@ -416,10 +423,11 @@
     <h2 class="sectitle reveal d1">Tizim — video tushuntiruv</h2>
     <p class="lead reveal d2" style="margin-left:auto;margin-right:auto">Tizim jarayonini qisqa animatsion videoda ko‘ring.</p>
     <div class="vidsingle reveal d2">
-      <div class="ratio">
-        <iframe src="https://www.youtube.com/embed/WSnW-v-3Aqk?rel=0&amp;modestbranding=1" title="Tizim — video tushuntiruv" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="ratio" id="ytfacade" data-id="WSnW-v-3Aqk" role="button" tabindex="0" aria-label="Videoni ijro etish">
+        <img class="ytthumb" src="https://i.ytimg.com/vi/WSnW-v-3Aqk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WSnW-v-3Aqk/hqdefault.jpg'" alt="Tizim — video tushuntiruv" loading="lazy">
+        <span class="ytplay" aria-hidden="true"><svg viewBox="0 0 68 48"><path d="M66.5 7.4a8.6 8.6 0 0 0-6-6C55.2 0 34 0 34 0S12.8 0 7.5 1.4a8.6 8.6 0 0 0-6 6A89 89 0 0 0 0 24a89 89 0 0 0 1.5 16.6 8.6 8.6 0 0 0 6 6C12.8 48 34 48 34 48s21.2 0 26.5-1.4a8.6 8.6 0 0 0 6-6A89 89 0 0 0 68 24a89 89 0 0 0-1.5-16.6z" fill="#f00"/><path d="M27.2 34.4 45.1 24 27.2 13.6z" fill="#fff"/></svg></span>
       </div>
-      <div class="vidhint reveal d3">4K sifat uchun pleyerda ⚙️ → Quality → 2160p ni tanlang.</div>
+      <div class="vidhint reveal d3">Ijro etish uchun bosing. Agar ochilmasa — <a href="https://youtu.be/WSnW-v-3Aqk" target="_blank" rel="noopener">YouTube’da oching ↗</a>. 4K uchun ⚙️ → 2160p.</div>
     </div>
   </div>
 </section>
@@ -466,6 +474,7 @@
 <script>
 const io=new IntersectionObserver((es,ob)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ob.unobserve(e.target);}}),{threshold:.16});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function(){var f=document.getElementById('ytfacade');if(!f)return;function go(){f.innerHTML='<iframe src="https://www.youtube.com/embed/'+f.dataset.id+'?autoplay=1&rel=0&modestbranding=1" title="Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';}f.addEventListener('click',go);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});})();
 document.querySelectorAll('.pbtn,.fsbtn').forEach(b=>{if(b.title&&!b.getAttribute('aria-label'))b.setAttribute('aria-label',b.title);});
 document.querySelectorAll('.flowcap').forEach(c=>{c.setAttribute('aria-live','polite');c.setAttribute('role','status');});
 document.querySelectorAll('svg.flow').forEach(s=>s.setAttribute('role','img'));
